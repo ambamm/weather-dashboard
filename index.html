@@ -10,10 +10,29 @@
 
 <body>
   
-
-    //check bootstrap for proper navigation on this page
-
+    <h1>Weather Dash</h1>
  
+    <div class="container">
+        <div class="row">
+
+            <aside>
+
+                <h2>Search For a city</h2>
+                <form id="search-form">
+
+                    <input type="text" id = "search" class="form-input">
+
+                    <button type ="submit" class="search-button" id = "search-button">submit</button>
+                </form>
+
+            </aside>
+            <div>
+                <section id="today"></section>
+            </div>
+        </div>
+
+    </div>
+       
 
   <script>
 
@@ -23,7 +42,7 @@
 
   <!--Link to external JavaScript file-->
 
-  <script src="script.js"></script>
+  <script src="./assets/script.js"></script>
 
 </body>
 </html>
