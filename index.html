@@ -13,30 +13,40 @@
     <body
         class="bg-fixed bg-no-repeat" style="background-image: url(./assets/images/weather3.jpeg)">
 
+ 
+     /*   input forms
+    city search --> current & future conditions for that city & added to search history 
+    city: name, date, icon of weather condtions, tem, humidity, wind speed (also for future)
+    5 day 4cast: date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity /*
+    
+
 
         <!-- Content here -->
 
 
-        <h1>Weather Dash</h1>
-
         <div class="container">
-            <div class="row">
 
-                <aside>
+            <h1>Weather Dash</h1>
 
-                    <h2>Search For a city</h2>
-                    <form id="search-form">
 
-                        <input type="text" id="search" class="form-input">
+            <aside>
+                <h2>Search For a city</h2>
+                <form id="search-form">
 
-                        <button type="submit" class="search-button" id="search-button">submit</button>
-                    </form>
+                    <input type="text" id="search" class="form-input">
 
-                </aside>
-                <div>
-                    <section id="today"></section>
-                </div>
+                    <button type="submit" class="search-button" id="search-button">submit</button>
+                </form>
+
+            </aside>
+            <div>
+                <section id="today"></section>
             </div>
+
         </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
     </body>
-</html></div></div><script></script><!--Link to external JavaScript file--><script src="./assets/script.js"></script></body></html>
+</html>
+
