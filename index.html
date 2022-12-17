@@ -14,10 +14,10 @@
         class="bg-fixed bg-no-repeat" style="background-image: url(./assets/images/weather3.jpeg)">
 
  
-     /*   input forms
-    city search --> current & future conditions for that city & added to search history 
+     <!-- /*   input forms
+    current & future conditions for that city & added to search history 
     city: name, date, icon of weather condtions, tem, humidity, wind speed (also for future)
-    5 day 4cast: date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity /*
+    5 day 4cast: date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity /* -->
     
 
 
@@ -37,14 +37,32 @@
 
                     <button type="submit" class="search-button" id="search-button">submit</button>
                 </form>
+                    <ul id = "cityList">
 
+
+                    </ul>
             </aside>
             <div>
-                <section id="today"></section>
+                <section id="today">
+                    <h4 id = "cityName"></h4>
+                </section>
+
             </div>
 
-        </div>
+            <div>
+                <section id="forcast"></section>
+            </div>
 
+            
+
+
+
+
+
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/script.js"></script>
     </body>
