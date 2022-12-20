@@ -1,5 +1,8 @@
 //variables
-
+//func that populates a list of cities that have been searched/searchable history
+//fun that handles the submit of the search form
+//fun that handles clicking on a previoulsy searched city
+//fun that calls that api and populates the weather data
 var api = "e3f5192af11f96c2ca0a8644dabb537a";
 var searchForm = $("#search-form");
 var searchEl = $("#search");
@@ -9,7 +12,8 @@ var cityListEl = $("#cityList");
 var searchedHistory = localStorage.getItem("city")
   ? JSON.parse(localStorage.getItem("city"))
   : []; //ternary operator
-var cityInputEl = "";
+var cityInputEl = [];
+var cityName =localStorage.getItem("city")
 
 //different apis for coords, (aka rest api) different end points for rest apis, data's seg. depending the specific request
 // var iconUrl = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
@@ -38,7 +42,9 @@ function handleSearchSubmit(event) {
   cityInputEl = $("#search").val().trim();
   if (!searchedHistory.includes(cityInputEl)){
         searchedHistory.push(cityInputEl)
+
   }
+
   if (!cityInputEl){
         return
   }
@@ -47,7 +53,7 @@ function handleSearchSubmit(event) {
   $("#cityName").text(cityInputEl)
   searchEl.val("") //clearing search bar
 
-  localStorage.setItem("city", JSON.stringify(searchedHistory))
+  localStorage.setItem("city", JSON.stringify(searchedHistory));
 }
 
 
@@ -63,7 +69,8 @@ function fetchCurrentWeather(city) {
     });
 }
 
-searchForm.addEventListener("submit", handleSearchSubmit);
+
+// searchForm.addEventListener("submit", handleSearchSubmit);
 
 //for the next call lat, long,
 
